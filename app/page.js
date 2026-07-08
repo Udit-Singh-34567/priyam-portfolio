@@ -12,7 +12,7 @@ import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-[#050b2f]">
+    <main className="overflow-x-hidden bg-[#050b2f] text-white">
       <Navbar />
       <Hero />
       <Designs />
