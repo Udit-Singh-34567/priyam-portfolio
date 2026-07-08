@@ -27,7 +27,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="bg-[#050b2f] py-28">
+    <section className="bg-[#050b2f] pt-28 pb-56">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Heading */}
@@ -100,37 +100,51 @@ export default function Skills() {
         {/* Bottom Counter */}
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-24"
-        >
-          <h2
-            className="
-              text-6xl
-              md:text-7xl
-              font-black
-              text-white
-            "
-          >
-            100+
-          </h2>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.3 }}
+  className="mt-32 mb-32 grid grid-cols-3"
+>
+  {/* Projects */}
+  <div className="border-r border-white/10 py-10 text-center">
+    <h2 className="text-5xl font-black text-white md:text-7xl">
+      20+
+    </h2>
 
-          <p
-            className="
-              mt-2
-              text-lg
-              leading-6
-              text-white/60
-            "
-          >
-            Projects
-            <br />
-            Completed
-          </p>
-        </motion.div>
+    <p className="mt-3 text-sm leading-6 text-white/60 md:text-lg">
+      Projects
+      <br />
+      Completed
+    </p>
+  </div>
 
+  {/* Clients */}
+  <div className="border-r border-white/10 py-10 text-center">
+    <h2 className="text-5xl font-black text-white md:text-7xl">
+      10+
+    </h2>
+
+    <p className="mt-3 text-sm leading-6 text-white/60 md:text-lg">
+      Satisfied
+      <br />
+      Clients
+    </p>
+  </div>
+
+  {/* Reviews */}
+  <div className="py-10 text-center">
+    <h2 className="text-5xl font-black text-white md:text-7xl">
+      1K+
+    </h2>
+
+    <p className="mt-3 text-sm leading-6 text-white/60 md:text-lg">
+      Positive
+      <br />
+      Reviews
+    </p>
+  </div>
+</motion.div>
       </div>
     </section>
   );

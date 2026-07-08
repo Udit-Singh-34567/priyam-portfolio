@@ -24,14 +24,18 @@ function InfiniteRow({ items, reverse = false }) {
   const repeated = [...items, ...items];
 
   return (
-    <div className="relative overflow-hidden py-3">
+    <div className="relative overflow-hidden py-5">
+      {/* Edge Fade */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-28 bg-gradient-to-r from-[#050b2f] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-28 bg-gradient-to-l from-[#050b2f] to-transparent" />
+
       <motion.div
-        className="flex w-max gap-10 whitespace-nowrap"
+        className="flex w-max items-center gap-20 whitespace-nowrap"
         animate={{
           x: reverse ? ["-50%", "0%"] : ["0%", "-50%"],
         }}
         transition={{
-          duration: 25,
+          duration: 60, // slower = more cinematic
           repeat: Infinity,
           ease: "linear",
         }}
@@ -39,18 +43,18 @@ function InfiniteRow({ items, reverse = false }) {
         {repeated.map((item, index) => (
           <div
             key={index}
-            className="flex items-center gap-10"
+            className="flex items-center gap-20"
           >
             <h2
               className="
-                text-[40px]
-                sm:text-[60px]
+                text-[42px]
+                sm:text-[62px]
                 md:text-[90px]
                 lg:text-[110px]
                 font-black
                 uppercase
-                leading-none
                 tracking-[-0.05em]
+                leading-none
                 text-white
               "
             >
@@ -59,9 +63,9 @@ function InfiniteRow({ items, reverse = false }) {
 
             <span
               className="
-                text-white/15
                 text-[28px]
-                md:text-[40px]
+                md:text-[36px]
+                text-white/15
               "
             >
               ✦

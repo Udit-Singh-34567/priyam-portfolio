@@ -8,6 +8,7 @@ import Cinematics from "@/components/sections/Cinematics";
 import About from "@/components/sections/About";
 import SoftwareScroller from "@/components/sections/SoftwareScroller";
 import Skills from "@/components/sections/Skills";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <About />
       <SoftwareScroller />
       <Skills />
+      <Contact />
     </main>
   );
 }
